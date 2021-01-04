@@ -25,8 +25,6 @@ App({
               // 所以此处加入 callback 以防止这种情况
               if (this.userInfoReadyCallback) {
                 this.userInfoReadyCallback(res);
-                this.globalData.userInfo = res;
-                console.log(this.globalData.userInfo);
               }
             }
           })
