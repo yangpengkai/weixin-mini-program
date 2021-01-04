@@ -1,3 +1,13 @@
 <!--pages/mine/mine.wxml-->
-<view class="container">
+<view class="content">
+  <view class="content_box">
+    <view class="content_box_card">
+      <view class="content_box_card_header">
+        <text class="content_box_card_header_text">姓名:</text>
+        <text class="content_box_card_header_text">杨易</text>
+      </view>
+      <view class="content_box_card_center"></view>
+      <view class="content_box_card_footer"></view>
+    </view>
+  </view>
 </view>
