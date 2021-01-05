@@ -1,13 +1,40 @@
 <!--pages/mine/mine.wxml-->
 <view class="content">
   <view class="content_box">
-    <view class="content_box_card">
+    <view class="content_box_card" wx:for="{{list}}" wx:for-item="item" wx:for-index="index" wx:key="*this">
       <view class="content_box_card_header">
-        <text class="content_box_card_header_text">姓名:</text>
-        <text class="content_box_card_header_text">杨易</text>
+        <text class="content_box_card_header_text">id:</text>
+        <text class="content_box_card_header_text">{{item.id}}</text>
       </view>
-      <view class="content_box_card_center"></view>
-      <view class="content_box_card_footer"></view>
+      <view class="content_box_card_center">
+        <text class="content_box_card_center_text">姓名:</text>
+        <text class="content_box_card_center_text">{{item.name}}</text>
+      </view>
+      <view class="content_box_card_footer">
+        <text class="content_box_card_footer_text">年龄</text>
+        <text class="content_box_card_footer_text">{{item.age}}</text>
+      </view>
     </view>
+
+    <view style="background:#ccc;">
+      <input type="text" bindinput="oninput"></input>
+      <button bindtap="handletap" data-operation="{{1}}">+</button>
+      <button bindtap="handletap" data-operation="{{-1}}">-</button>
+      <view>{{num}}</view>
+    </view>
+
+    <view hidden>
+      <view wx:if="{{true}}">显示 </view>
+      <view wx:if="{{false}}">隐藏 </view>
+
+      <view wx:if="{{isagent == 1}}">1 </view>
+      <view wx:elif="{{isagent == 2}}">2 </view>
+      <view wx:else>3</view>
+
+      <view hidden>隐藏</view>
+      <view hidden="{{ishidden}}">隐藏</view>
+    </view>
+
+
   </view>
 </view>
