@@ -22,27 +22,27 @@ Page({
         age: 21
       }
     ],
-    isagent:1,
-    ishidden:false,
-    num:0
+    isagent: 1,
+    ishidden: false,
+    num: 0
   },
 
-  oninput(e){
+  oninput(e) {
     this.setData({
-      num:e.detail.value
+      num: e.detail.value
     })
   },
-//这里是添加和删除按钮的事件
-  handletap(e){
+  //这里是添加和删除按钮的事件
+  handletap(e) {
     const operation = e.currentTarget.dataset.operation;
     this.setData({
-      num:this.data.num + operation
+      num: this.data.num + operation
     })
   },
 
-  handleishidden(){
+  handleishidden() {
     this.setData({
-      ishidden:!ishidden,
+      ishidden: !ishidden,
     })
   },
 

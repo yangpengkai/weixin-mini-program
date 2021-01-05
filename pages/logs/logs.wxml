@@ -1,6 +1,7 @@
 <!--logs.wxml-->
+<!-- block标签在编译的时候小程序会忽略掉，不会显示在页面上。 -->
 <view class="container log-list">
   <block wx:for="{{logs}}" wx:for-item="log" wx:for-index="index" wx:key="*this">
-    <text class="log-item">{{index + 1}}. {{log}}</text>
+    <text class="log-item">第{{ index + 1}}次登陆时间. {{log}}</text>
   </block>
 </view>
