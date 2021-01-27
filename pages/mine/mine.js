@@ -22,8 +22,8 @@ Page({
         age: 21
       }
     ],
-    isagent: 1,
-    ishidden: false,
+    isagent: 2,
+    ishidden: true,
     num: 0
   },
 
@@ -70,35 +70,45 @@ Page({
   /**
    * Lifecycle function--Called when page hide
    */
-  onHide: function() {
-
+  onHide: function() {   //生命周期函数——页面隐藏时调用
+    wx.showModal({
+      title:'提示',
+      content:'你真的要离开这个页面吗?',
+      success(res){
+        if(res.confirm){
+          console.log('确定离开');
+        }else if(res.cancel){
+          console.log('不离开');
+        }
+      }
+    });
   },
 
   /**
    * Lifecycle function--Called when page unload
    */
-  onUnload: function() {
+  onUnload: function() { //生命周期函数——页面卸载时调用
 
   },
 
   /**
    * Page event handler function--Called when user drop down
    */
-  onPullDownRefresh: function() {
+  onPullDownRefresh: function() { //页面事件处理程序函数--在用户下拉列表时调用
 
   },
 
   /**
    * Called when page reach bottom
    */
-  onReachBottom: function() {
+  onReachBottom: function() { //当页面到达底部时调用
 
   },
 
   /**
    * Called when user click on the top right corner to share
    */
-  onShareAppMessage: function() {
+  onShareAppMessage: function() { //当用户单击右上角共享时调用
 
   }
 })

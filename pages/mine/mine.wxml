@@ -23,15 +23,15 @@
       <view>{{num}}</view>
     </view>
 
-    <view hidden>
+    <view hidden="{{true}}">
       <view wx:if="{{true}}">显示 </view>
       <view wx:if="{{false}}">隐藏 </view>
 
       <view wx:if="{{isagent == 1}}">1 </view>
       <view wx:elif="{{isagent == 2}}">2 </view>
-      <view wx:else>3</view>
+      <view wx:else="{{isagent == 3}}">3</view>
 
-      <view hidden>隐藏</view>
+      <view hidden="{{ishidden}}">隐藏</view>
       <view hidden="{{ishidden}}">隐藏</view>
     </view>
 

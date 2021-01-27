@@ -9,7 +9,7 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
-  //事件处理函数
+  //微信小程序里面事件的前缀是bind事件处理函数
   bindViewTap: function() {
     wx.navigateTo({
       url: '../logs/logs'
